@@ -1,0 +1,11 @@
+1. react-router-dom@5.2.0 설치 후 BrowserRouter 적용
+2. switch, route 컴포넌트 적용("/", "/product", "/upload")
+3. 상품에 Link 이용해서 상품페이지로 링크 걸기
+4. product/:id 설정(각 상품별로 각 상품페이지 이동하게 연결) - mainpage
+5. useParams를 이용하여 각각의 상품페이지를 설정 - productpage
+6. 각 상품 페이지에서 id에 맞게 postman에서 데이터가 받아오게 설정
+7. 각각의 상품페이지 설정(useEffect, axios, useState 이용) - postman에서 데이터 받아와서 페이지 꾸미기 - productpage
+8. 이미지 받아올 수 있게 방어코드 입력
+9. 로고 누르면 기본 url로 돌아가게 설정
+10. antd 설치
+11. antd로 상품 업로드 버튼 넣고 버튼 클릭시 usehistory로 업로드 페이지 링크 걸기

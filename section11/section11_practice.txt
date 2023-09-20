@@ -1,0 +1,30 @@
+1. sqlite3, sequelize 설치, sequelize 환경 구축(sequelize init)
+2. (config.js) sqlite로 설정 교체
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3"
+  }
+}
+3. sequielize 실행 코드 넣기(app.listen)
+4. models에 product.js 만들어서 디비에 테이블 만드는 코드 넣기(name, price, seller, description, imageUrl)
+5. DB Browser for SQLite로 확인하기
+6. post로 요청받아서 models로 product를 만드는 코드 넣기
+7. postman으로 요청해서 확인하기
+8. 필수정보 없을 시 요청 보내는 방어코드 짜기
+9. postman에서 객체 데이터 바꿔서 send 한 후 db browser에서 확인하기
+10. get요청(/products)에 있는 기존 객체 데이터 삭제하고 db에서 조회하는 코드 짜기 -> postman으로 확인
+11. get요청(/product/:id)에 있는 id가 일치하는 데이터만 불러오기 -> postman으로 확인
+12. get요청(/products)에 지정된 갯수만 조회하게 하기 -> postman으로 확인
+13. get요청(/products)에 order로 생성 날짜를 내림차순으로 -> postman으로 확인
+14. attributes로 지정된 키값만 조회(id, name, price, createdAt, seller, imageUrl) -> postman으로 확인
+15. DB browser에서 imageURL 넣기
+16. 클라이언트에서 상세페이지 정보 받아오게 하기

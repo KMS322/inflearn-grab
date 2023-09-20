@@ -1,0 +1,2 @@
+1. axios 설치 후 postman mockserver와 연결하여 result 값 확인 ( mockserver url : "https://b7d1d21e-6c41-4a63-97c7-2b4bc4e269fd.mock.pstmn.io/products" )
+2. useState, useEffect, map을 이용하여 mockserver에서 받아온 데이터로 메인페이지 상품들 업로드

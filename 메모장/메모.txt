@@ -1,0 +1,838 @@
+rd /s /q node_modules : node_modules 없애는 명령어
+Section0
+- vscode extension 
+material theme : ctrl + shift + p -> color theme
+material icon theme
+prettier : ctrl + shift + p -> settings.json(open user) 
+->"editor.formatOnSave": true,
+    "editor.showUnused": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+입력
+
+Section1
+- 일상환경 구축
+프로그래밍에 더 빨리 익숙해지기 위해서 주변 환경을 바꾸는 것도 큰 도움이 됩니다.
+본인의 SNS, 미디어 채널을 개발, IT와 관련된 콘텐츠로 채운다면 더 흥미를 가지고 개발하실 수 있을 겁니다💪🏼
+[페이스북 페이지]
+생활코딩 : https://www.facebook.com/groups/codingeverybody
+나 개발한번 해보려고 :  https://www.facebook.com/TryToGaebal/
+출퇴근길 개발 읽기 : https://www.facebook.com/devCommuter
+테크 니들 : https://www.facebook.com/techneedle
+개발자스럽다 : https://www.facebook.com/gaeraecom
+프론트엔드개발그룹 : https://www.facebook.com/groups/webfrontend
+
+[유튜브]
+노마드 코더 : https://www.youtube.com/channel/UCUpJs89fSBXNolQGOYKn0YQ
+테크보이 워니 : https://www.youtube.com/channel/UC0uDM1xZMNBAoW2xnzhAQ7g
+드림코딩 by 엘리 : https://www.youtube.com/channel/UC_4u-bXaba7yrRz_6x6kb_w
+Interactive Developer : https://www.youtube.com/channel/UCdeWxKJuvtUG2xyN6pOJEvA
+그랩의 IT 열차 : https://www.youtube.com/channel/UCv6qWqCUlp-_3NfWDqSEnNg
+[IT, 테크 뉴스레터]
+그랩의 IT 뉴스레터  : https://maily.so/grabNews
+미라클레터 : https://page.stibee.com/subscriptions/33271
+바이라인 네트워크 : https://byline.network/
+일분톡 : http://ilbuntok.com/
+뉴닉  : https://newneek.co/
+
+[기타]
+아웃스탠딩 : https://outstanding.kr/
+GeekNews : https://news.hada.io
+
+Section2
+- 개발자도구 : F12
+- 태그 속 컨텐츠가 따로 없다면 "/>로 닫기 : <img src="" />, <br/>, <input type=""/>
+- <script src="" type="text/javascript"></script>
+- css : 선택자 { 속성1 : 값; 속성2 : 값 }
+- <style type="text/css"></style>
+- 선택자 , 선택자 { } : 두 선택자에 디자인 적용
+- 복합선택자 : 하위 선택자(띄어쓰기, 상위 선택자 안에 있는 모든 태그), 자식 선택자(>, 상위 선택자의 바로 첫번째 자식으로 있는 태그)
+- 주석 처리 -> html : <!-- --> css : /* */
+- color : #ffffff -> 16진수 표현법, red(blue, yellow) -> 예약어
+- flex 설명 : https://heropy.blog/2018/11/24/css-flexible-box/
+- flex : 부모는 container, 자식은 item
+- 부모 속성 -> justify-content : 정렬 방향, align-items : 수직 방향
+- div의 height가 없으면 텍스트 크기만큼 설정
+- 자식 속성 -> flex-grow : 남은 여백 차지 
+- border-radius 적용시 이미지가 넘치면 overflow:hidden 적용
+
+Section3
+- let은 다른 값을 넣을 수 있고 const는 안된다.
+- 개발자 도구에서 새로고침 : ctrl+r, 줄바꿈 : shift+Enter
+- 자료형 확인 : typeof 변수
+- 배열.push(값); : 배열에 추가
+- 객체에서 접근 시 : 객체명['키']
+- 함수 선언식 : fucntion 함수명() { }
+  함수 표현식 : const 함수명 = function () { }
+
+Section4
+- setTimeout(function() { }, n*1000) : n초 뒤에 함수가 실행
+  setInterval(function() { }, n*1000) : n초 마다 함수가 실행
+
+- axios
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+axios.get("url").then(functino(result) {
+  console.log(result.status) // 통신 상태
+  console.log(result.data) // url 내의 데이터
+}).catch(function(error) {
+  console.error(error) // error 정보
+})
+console.log("실행") // 통신 접속 전에 실행
+
+- postman 사용
+워크페이스 생성
+setting에서 mock servers on
+create mock server - save the mock server URL as an environment variable 체크하기
+
+
+Section5
+- Destructuring(비구조화 할당) : 객체, 배열 내의 값을 쉽게 빼낼 수 있다.
+const 객체명 = { key1 : value1, key2 : value2 };
+const 배열명 = [value3, value4];
+
+var { key1, key2 } = 객체명;
+const [key3, key4] = 배열명;
+
+- forEach : 배열을 조회, 배열.length 만큼 순회한다.
+배열명.forEach(function(순회하는 값, 인자) {
+  console.log(순회하는 값);
+  console.log(index); 
+})
+
+- map : 배열을 조회, 새로운 배열을 반환할 수 있다. 
+배열명.map(function(순회하는 값, 인자) {
+  return 순회하는 값.key;
+})
+
+- Lambda Function(람다 함수, 화살표 함수, arrow function) : 함수를 축약하여 표현
+const 함수명 = ( ) => { }
+const 함수명 = ( ) => return 값;
+
+- conditional ternary operator(3항 연산자) : if문을 단축 형태로 사용
+논리 ? 참 : 거짓
+
+Babel : 브라우저 버전에 맞게 javascript를 변환시켜주는 도구
+
+Section7
+- node.js : 자체적으로 프로그램을 만든다.
+설치 사이트 : https://nodejs.org/en/download/ -> LTS에서 설치(npm도 같이 설치 된다.)
+(cmd) node -v : node.js 버전확인(node 설치 유무 확인)
+
+- npm(node package manager) : node 프로젝트의 패키지를 관리
+(cmd) npm -v : npm 버전확인(npm 설치 유무 확인)
+
+- (cmd) node : 노드 환경에서 작업 가능 -> javascript 사용 가능
+ctrl + c : node 환경 탈출
+(cmd)node js파일명.js : js파일 실행
+
+- react 시작(vscode 터미널)
+npm install -g create-react-app : react앱 설치
+create-react-app . : 현재 폴더에 react 환경 설치(" . "은 현재 위치에 설치하라는 의미)
+npm start : react 파일 실행
+ctrl + c : react 파일 취소
+(기본 브라우저 설정 : 윈도우에서 "기본 앱" 검색 후 웹 브라우저 설정)
+
+- node_modules : 다운 받은 외부 코드들이 들어가 있다.
+
+- public/index.html : 웹 화면에서 보이는 실질적인 화면
+public 폴더에는 이미지나 영상 파일을 정리하고 src 폴더에 보여지게 될 화면 파일을 정리한다.
+
+
+- import, export : 하나의 모듈(js 파일)에서는 하나의 함수만 export 할 수 있다.
+-> 모듈 내에서 함수명과 export 변수 값을 동일해야하지만 import하는 파일에서는 불러오는 파일명이 일치한다면 함수명은 달라도 상관이 없다.
+import axios from 'axios'; : npm을 통해 다운받은 라이브러리에서 함수 혹은 객체를 불러온다.
+import App from './App.js'; : 프로젝트 폴더 안에 있는 파일에서 함수 혹은 객체를 불러온다.
+export를 해야 import 할 수 있다.
+import {a, b, c} from './App.js';
+export default App;
+export { a : funcA, b: funcB, c: varC }
+(확장자 .js는 생략 가능, 파일명도 생략 가능)
+추가 설명 : https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-%EB%AA%A8%EB%93%88-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-import-export-%EC%A0%95%EB%A6%AC
+
+- 프로젝트를 시작할 때 src/index.js를 가장 먼저 실행시킨다.
+
+- src/index.js의 root.render 내의 코드가 public/index.html 내의 root div로 전달되는데
+root.render 내에 <App /> 있으므로 src/App.js 에서 반환되는 코드들이 root div로 전달된다.
+
+- component : 함수로 구성되어 있으며 UI요소를 return 해야한다.
+(html 태그들과 거의 다 유사하지만 class 태그는 className으로 쓴다.)
+
+자식 컴포넌트(한개의 <div> 태그만 전달이 된다.)
+function child() {
+ return ul요소
+}
+export default child;
+
+부모 컴포넌트 
+function parent() {
+ return (
+  <child />
+)
+}
+-> 다른 컴포넌트를 return 문 안에 사용하면 부모 컴포넌트, 사용을 당하는 컴포넌트는 자식 컴포넌트
+
+- JSX 문법 : React에서 js파일에서 html 태그를 자유롭게 사용할 수 있게 한다.
+-> { } 속에 변수와 함수실행 등을 넣을 수 있다. ex : {변수}, {함수명()}
+
+- props : 부모 컴포넌트에서 자식 컴포넌트로 값을 전달해준다.(자식 컴포넌트에서 부모 컴포넌트에서 받은 값을 적용하여 부모컴포넌트에 띄운다.)
+function 부모컴포넌트 {
+  <자식컴포넌트 key1 = value1 key2 = value2/>
+}
+fuction 자식(props) {
+  const {key1, key2} = props;
+ return {key1}, {key2}
+}
+
+- state : 컴포넌트를 업데이트해줄 수 있도록 해주는 장치, state가 변경되면 컴포넌트는 업데이트 한다. 
+state는 props와 반대로 변화하는 값, props는 부모에게 받는 값, state는 컴포넌트 내에서 사용하는 값이다.
+const [ 변수1, 변수2 ] = React.useState(시작값(변수1의 초기값)) -> useState()를 비구조할당하면 값이 2개인 배열이 반환된다.
+변수1는 인자값, 변수2는 업데이트 해주는 함수이다.
+ 
+- useEffect : 렌더링하는 것을 제어할 수 있는 장치
+useEffect(function() { } , [모니터링 대상]); : 모니터링 대상이 변경될 때마다 function이 재실행된다.(값이 없다면 한번만 실행)
+ex : 
+function TimerComponent() {
+  const [time, setTime] = React.useState(0);
+  console.log("컴포넌트 업데이트");
+  React.useEffect(function() {
+    setTime(time+1);
+  }, [])
+  return (
+    <div>
+      <h3>{time}초</h3>
+      <button>1씩 올려주세요.</button>
+    </div>
+  )
+}
+
+- 컴포터넌트 내의 return 문은 한 개의 div 태그만 반환된다.
+
+- export하지 않는 파일을 import 할때는 import "경로"; 만 작성(ex: import './index.css');
+
+- (cmd)axios 설치 : npm install axios
+import axios from 'axios';
+
+- Unique "key" prop : div에 key={index} 추가
+
+- useState
+const [products, setProducts] = React.useState([]);
+
+Section8
+- git : 하나의 프로젝트를 버전별로 관리할 수 있도록 도와주는 프로그램
+커밋(commit) : git에 업로드하는 코드 단위
+
+- git 사용 :
+https://git-scm.com/ 에서 git 다운
+(cmd) git --version : 설치 확인
+(cmd) git --init : git으로 관리하기 위한 프로젝트로 설정
+(cmd) git status : 변경된 파일 확인
+.gitignore : 용량이 큰 부분은 건들지 않기위한 파일
+(cmd) git add . : 현재 경로의 프로젝트를 전부 stage에 추가
+-> (cmd) git add index.js : index.js 파일만 stage에 추가
+-> (cmd) git add ../pages : 부모 폴더의 pages 폴더 안에 있는 파일 중 변화가 있는 것을 stage에 추가
+(cmd) git status : stage에 올라간 파일 확인
+(cmd) git commit -m "메시지" : stage에 있는 파일을 commit으로 만들기 
+(cmd) git log : commit 내역을 확인
+{ (github) …or push an existing repository from the command line 복사
+(cmd) 붙여넣기 }
+(cmd) git remote add origin https://github.com/KMS322/grab-market-client.git : 로컬과 원격을 연결
+(cmd) git branch -M main : main branch(commit들을 담는 공간)
+(cmd) git push -u origin main : 로컬 main branch에 있는 commit을 원격으로 push
+(cmd) git config --global user.email "이메일 계정" : 이메일 계정 입력
+(cmd) git config --global user.name "계정명" : 계정 입력
+
+-git 저장소 제거
+(cmd)rmdir /s /q .git
+
+-처음 깃 만들어서 깃허브에 올릴때
+(cmd) git init -> git add . -> git commit -m "메시지" -> 깃허브에 레포지토리 만들기 -> 
+git remote add origin https://github.com/아이디/레포지토리명.git
+git branch -M main
+git push -u origin main
+
+-수정 변경할때
+(cmd) git add . -> git commit -m "메시지" -> git push
+
+-초대받은 계정에 업로드 해야할때
+(복제를 해야 된다면)
+git clone 레포지토리 주소 
+or git clone -b 브랜치명 레포지토리 주소
+cd 폴더명
+git checkout -b 브랜치명
+git add .
+git commit -m "커밋명"
+git push origin 브랜치명
+
+git pull origin hompage-creamoff
+
+-브랜치 복제
+git clone -b 브랜치명 레포지토리 주소
+
+(복제안해도 된다면)
+git init
+git checkout -b 브랜치명
+git add .
+git commit -m "커밋명"
+git remote add origin 레포지토리 주소
+git push origin 브랜치명
+
+-로그인되어있는 git 계정 확인
+git config user.name
+git config user.email
+
+-계정 재설정
+git config --global --unset user.name
+git config --global --unset user.email
+git config --global user.name "계정"
+git config --global user.email "메일"
+
+-브랜치 설정
+목록 확인(로컬) : git branch
+목록 확인(리모트) : git branch -r
+목록 확인(모두) : git branch a
+
+-연결된 레포지토리 확인
+git remote -v
+
+-remote url 바꾸기
+git remote set-url origin 레포지토리 주소
+
+
+
+
+
+Section9
+- routing : 페이지를 이동한다.
+
+- React-router-dom : React에서 화면전환을 위한 라이브러리
+(cm)npm install react-router-dom@5.2.0 : react-router-dom 라이브러리 설치
+(src/index.js)import {Browser Router} from 'react-router-dom'; : browser router import
+(src/index.js)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+(src/App.js)import { Switch, Route } from "react-router-dom"; : switch, route import
+(src/App.js)
+<Switch>
+  <Route exact={true} path="/product/:id">
+    <ProductPage />
+  </Route>
+</Switch>
+exact={true} 는 경로가 정확히 일치 할 때만 이동하게 하려는 장치
+
+(src/main/index.js)import { Link } from "react-router-dom"; : link import
+(src/main/index.js)<Link to={"경로"}><div> ... </div></Link>
+
+- url만 변경되고 화면 이동이 안되는 경우 : <React.StrictMode> 삭제
+(src/index.js)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+React.StrictMode : 개발단계에서 잠재적인 문제를 쉽게 발견하는 기능 
+
+- page에 넘버링 하기
+(src/app.js) 
+<Route exact={true} path="/products/:id">
+  <ProductPage/>
+</Route>
+(src/main/index.js)
+<Link className="product-link" to={`/products/${index}`}>
+
+(src/product/index.js) import { useParams } from "react-router-dom"; : useParams import
+function ProductPage() {
+  const { id } = useParams();
+  return <h1>상품 상세 페이지 {id} 상품</h1>;
+}
+
+- 경로 적을 때 맨앞에 "/"을 붙이면 이 프로젝트를 기준으로 하겠다는 의미이며 public은 생략이 가능하다.
+
+- if(product === null) {
+    return <h1>상품 정보를 받고 있습니다...</h1>
+  }
+  : 서버에서 데이터 받은 후 부터 정보를 띄우기 위한 방어코드 
+
+- Antd(https://ant.design/components/overview) : 디자인을 위한 라이브러리
+(cmd) npm install antd
+(cmd) npm install @ant-design/icons --save : 아이콘 라이브러리 설치
+
+- 기본 경로 : "/"(메인)
+<Link to="/">
+
+- useHistroy : link 기능, 컴파일 하면 a 태그가 안생김.
+import useHistroy from 'react-router-dom';
+const history = useHistroy();
+histroy.push('경로');
+
+- form
+import { Form } from "antd";
+function UploadPage() {
+  const onSubmit = (values) => {
+    console.log(values);
+  }
+  return (
+    <div>
+      <Form name="상품업로드" onFishish={onSubmit}>
+        <Form.Item name="upload">
+          <div id="upload-img-placeholder">
+          </div>
+        </Form.Item>
+      </Form>
+    </div>
+  );
+}
+Form 태그 안에는 onFinish가 들어가야 하고 Form.Item 안에서 컨트롤 한다.
+
+- divider : 선을 그어준다.
+import { Divider } from "antd";  
+
+- input, InputNumber
+import { Input, InputNumber } from "antd";
+
+-form과 input 예시
+<Form.Item
+  label={<div className="upload-label"
+  name="seller"
+  rules={[{required:true, message: '판매자 이름을 입력해주세요.'}]}>판매자 명</div>}
+  >
+    <Input className="upload-name" size="large" placeholder="이름을 입력해주세요."/>
+</Form.Item>
+
+Section10
+- API(Application Programming Interface) 서버 : 정보를 제공하는 서버(정보를 저장하지는 않는다. 정보 저장은 DB에 한다.),
+프로그램과 프로그램을 연결시켜주는 매개체
+
+- URL(Uniform Resource Locator)
+-> 프로토콜 : 컴퓨터 간 통신 규격, HTTP, FTP, SSH 가 있다.
+-> 호스트주소 : 도메인 네임 or ip주소
+-> 포트번호 : 서버컴퓨터에서 실행되고 있는 프로세스들의 주소(http는 80, https는 443, react는 3000, node서버는 8080)
+-> 경로 : 프로그램 내에 짜인 로직으로 가는 영역
+-> 쿼리 : 경로 뒤에 ? 뒤에 키=벨류 형식이다. 추가적인 데이터를 표시한다.
+
+- node.js 서버
+node는 브라우저가 아닌 곳에서도 js를 실행할 수 있도록 나온 어플리케이션
+(cmd)npm init : 노드 프로젝트 설정
+
+- commonJS 방식 : ES6 방식과 유사하지만 약간의 차이가 있다.(모듈 로딩에서 차이가 있다.)
+export방법
+function hello() { }
+module.exports = hello;
+import방법
+var hello = require('./hello.js')
+hello();
+
+복수개 export
+function funcA() { } function funcB() { }
+exports.a = funcA;
+exoprts.b = funcB;
+복수개 import
+var modules = require('./hello.js');
+modules.a();
+modules.b();
+
+- 서버 구축 : 
+var http = require('http');
+var hostname = '127.0.0.1'; 
+var port = 8080;
+
+const server = http.createServer(function(req, res) {
+  console.log("REQUEST : ", req);
+});
+
+server.listen(port, hostname);
+
+- API 서버 개발하기
+var http = require('http');
+var hostname = '127.0.0.1'; //내부 아이피, 내 컴퓨터 주소
+var port = 8080;
+
+const server = http.createServer(function(req, res) {  // req는 클라이언트로 부터 요청 받는 것, res는 클라이언트로 응답해주는 것
+  const path = req.url;
+  const method = req.method;
+  if(path === '/products') {
+    if(method === 'GET') {
+      res.writeHead(200, {'Content-Type': 'application/json'})
+      const products = JSON.stringify([{
+        name: "농구공",
+        price: 5000
+      }]);
+      res.end(products);
+    }else if(method === 'POST') {
+      res.end('생성되었습니다!'); 
+    }
+  }
+  res.end("Good Bye");
+});
+
+server.listen(port, hostname); //port와 hostname으로 기다리고 있겠다.
+
+console.log('grab market server on!');
+
+- red.end() 에는 스트링이 들어가야한다. json 형식으로 보낼려면 변환해줘야 한다. (express를 이용하면 변환안해줘도 된다.)
+ex1 : res.end(JSON.stringify([{
+        name : "농구공",
+        price: 5000
+      }]))
+ex2 : const products = JSON.stringify([{
+        name : "농구공",
+        price: 5000
+      }])
+      res.end(products);
+
+- .gitignore 만들어서 node_modules 입력
+.gitattributes 만들어서 *.txt text eol=lf 입력 : 윈도우와 리눅스가 줄바꿈 개념이 다르기 때문에 하는 짓.
+
+- express 프레임워크
+https://expressjs.com/ko/
+(cmd)npm install express
+(cmd)npm install cors : Cross Origin Resource Sharing 이슈를 막기 위해 사용
+
+(express.js)
+const express =require('express');
+const cors = require('cors');
+const app = express();
+const port = 8080;
+
+app.use(express.json());
+app.use(cors());
+
+app.get("/products", (req, res) => {
+  res.send("업로드 된 상품들입니다.");
+})
+
+app.post("/products", (req, res) => {
+  res.send("상품이 등록되었습니다.")
+})
+
+app.listen(port, () => {
+  console.log("서버가 돌아가고 있습니다.");
+})
+
+(cmd)node server.js
+
+- const query = req.query; // query 확인
+
+- 객체에서 키와 벨류가 같으면 벨류는 생략해도 된다.
+ex : res.send({ body }); = res.send({ body: body});
+
+- 동적인 경로 설정
+app.get("/products/:id/event/:eventId", (req,res) => {
+  const params = req.params;
+  const {id, eventId} = params;
+  res.send(`id는 ${id}와 ${eventId}입니다.`);
+})
+
+Section11 
+- DB
+create : 생성
+read : 조회
+update : 업데이트
+delete : 제거
+생성, 조회, 업데이트, 제거를 줄여서 CRUD(씨알유디) 라고 부른다.
+SQL : 위와 같은 명령들을 할 수 있도록 도와주는 언어
+데이터베이스 모델링 : 테이블, 컬럼 생성을 손쉽게 할 수 있다.
+
+- DB 프로그램 : mysql, postgresql, oracle, mssql 등이 있다.
+NoSQL도 있다.
+
+- RDBMS(관계형 데이터베이스) : 가장 많이 쓰이는 데이터베이스 형식(이 외의 형식으로는 NoSQL도 있다.)
+
+- sqlite : 개발용으로 많이 사용되는 DB
+
+- ORM(Object Relational Mapping) : DB를 손쉽게 다룰 수 있는 툴
+
+- sequelize : node.js에서 자주 사용하는 ORM 툴
+
+- sqlite, sequelize 사용
+(cmd)npm install sequelize sqlite3
+(cmd)npm install -g sequelize-cli
+(cmd)sequelize init -> config, models, seeders, migrations 생긴다.
+(config.js)
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3"
+  }
+}
+로 교체 : sqlite로 개발하기 위해.
+
+(server.js)
+const models = require('./models'); 추가
+
+(server.js)
+app.listen(port, () => {
+   models.sequelize.sync().then(()=> {
+    console.log("DB 연결 성공!");
+  }).catch((err)=> {
+    console.error(err);
+    console.log("DE 연결 에러");
+    process.exit(); // 디비 연결 안되면 종료
+  })
+})
+-> models/index.js와 동기화하여 디비에 테이블을 만든다. sequelize가 잘 작동되면 실행된다.
+(models)product.js 생성 // DB에게 명령을 내리는 파일
+(product.js)
+module.exports = function(sequelize, DataTypes) {
+  const product = sequelize.define('Product', {
+    name : {
+      type: DataTypes.STRING(20),
+      allowNull : false //데이터가 꼭 존재해야 한다.
+    },
+    price : {
+      type : DataTypes.INTEGER(10),
+      allowNull: false
+    },
+    seller : {
+      type : DataTypes.STRING(30),
+      allowNull: false 
+    },
+    description: {
+      type : DataTypes.STRING(300),
+      allowNull: false 
+    },
+    imageUrl : {
+      type : DataTypes.STRING(300),
+      allowNull: true
+    }
+  })
+  return product;
+}
+-> DB 테이블 만드는 작업
+
+
+- DB Browser for SQLite 설치
+https://sqlitebrowser.org/dl/
+
+(server.js)
+if(!name || !description || !price || !seller ){
+  res.send("모든 필드를 입력해주세요.");
+} -> 데이터 없을시를 위한 방어
+app.post("/products", (req,res) => {
+  const body = req.body;
+  const {name, description, price, seller} = body;
+  models.Product.create({
+    name,
+    description,
+    price,
+    seller
+  }).then((result)=> {
+    console.log("상품 생성 결과 : ",result);
+    res.send({
+      result,
+    });
+  }).catch((err)=> {
+    console.err(err);
+    res.send("상품 업로드에 문제가 발생");
+  });
+
+})
+-> postman에서 받은 데이터를 디비로 생성
+
+(server.js)
+app.get("/products", (req,res) => {
+  models.Product.findAll().then((result)=> {
+    console.log("PRODUCTS: ",result);
+    res.send({
+      products : result
+    })
+  }).catch((error) => {
+    console.err(err);
+    res.send("에러 발생")
+  });
+})
+-> 디비에서 만든 데이터를 postman에서 확인
+
+(server.js)
+app.get("/products/:id/", (req,res) => {
+  const params = req.params;
+  const {id} = params;
+  models.Product.findOne( {
+    where : {
+      id : id
+    }
+  }).then((result) => {
+    console.log("PRODUCT : ", result);
+    res.send({
+      product: result,
+    })
+  }).catch((eroor) => {
+    console.error(error);
+    res.send("상품 조회에 에러가 발생했습니다.");
+  });
+});
+-> 디비에 있는 데이터 중 조건에 부합하는 항목을 postman에서 조회
+
+models.Product.findAll({
+    limit:2,
+})
+-> limit으로 불러오는 데이터 갯수 제한
+
+models.Product.findAll({
+  order: [
+    ['createdAt', 'DESC']
+  ],
+})
+-> 원하는 항목으로 원하는 정렬로 조회
+
+models.Product.findAll({
+    attributes: [
+      'id',
+      'name',
+      'price',
+      'createdAt',
+      'seller'
+    ],
+})
+-> 조회하고 싶은 컬럼만 조회  
+
+(cmd)npm install -g nodemon : 저장할때마다 적용이 된다.
+-> nodemon 파일명.js
+
+- dayjs 라이브러리 : 날짜를 다루는 라이브러리
+https://github.com/iamkun/dayjs
+-> (cmd)npm install dayjs
+import dayjs from 'dayjs';
+import relativeTime from "dayjs/plugin/relativeTime"
+dayjs.extend(relativeTime); 
+
+<span>{dayjs(product.createdAt).fromNow()}</span>
+
+Section12
+- multer
+https://github.com/expressjs/multer/blob/master/doc/README-ko.md
+
+-multipart/form-data : 용량이 큰 이미지, 영상 파일을 다룰때 사용
+
+(cmd)npm install multer : 파일 업로드를 처리하기 위한 라이브러리
+(server.js)
+const multer = require('multer');
+const upload = multer({dest : 'uploads/'})
+
+app.post('/image', upload.single('image'), (req,res)=> { // 이미지를 한개 보낼때 single, 'image'라는 키값이 필요
+  const file = req.file;
+  res.send({
+    imageUrl : file.path
+  })
+})
+-> 파일 처리를 하는 upload라는 폴더가 생긴다. 이미지 파일이 저장될 공간이다.
+-> \\ 문제 : imageUrl: file.path.replace(/\\/g, '/') 로 대체
+
+(server.js)
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: function(req, file, cb) {
+      cb(null, 'uploads')
+    },
+    filename: function(req,file,cb){
+      cb(null, file.originalname);
+    }
+  })
+});
+-> 파일명 원래 그대로 설정하는 방법
+
+- Upload
+(upload/index.js)import {Upload} from 'antd'
+<Upload 
+  name="image"  // key값
+  action="http://localhost:8080/image" 
+  listType="picture"
+  showUploadList={false}
+  onChange={function() {
+    
+  }}
+  >
+  <div id="upload-img-placeholder">
+    <img src="/images/icons/camera.png" />
+    <span>이미지를 업로드해주세요.</span>
+  </div>
+</Upload>
+
+- onChange 함수
+(upload/index.js)
+const [imageUrl, setImageUrl] = useState(null);
+const onChangeImage = (info) => {
+    if(info.file.status === "uploading"){
+      return;
+    }
+    if(info.file.status === 'done') {
+      const response = info.file.response;
+      const imageUrl = response.imageUrl;
+      setImageUrl(imageUrl);
+    }
+  }
+
+- 업로드 시 이미지 바뀌게 함
+(upload/index.js)
+<Upload 
+  name="image" 
+  action="http://localhost:8080/image" 
+  listType="picture"
+  showUploadList={false}
+  onChange={onChangeImage}
+  >
+  {
+    imageUrl ? <img src={`http://localhost:8080/${imageUrl}`}/> : <div id="upload-img-placeholder">
+    <img src="/images/icons/camera.png" />
+    <span>이미지를 업로드해주세요.</span>
+  </div>
+  }
+
+  </Upload>
+
+- 이미지가 넘어갈 때 url을 잘 받을 수 있게 해준다.
+(server.js)app.use('/upload', express.static('uploads')); 
+
+- jsx문법에서 div 태그 안에 style 속성 넣기
+<img style={{width: 300+ "px"}} />
+
+- object-fit : contain;
+-> image 비율 맞추는 css 코드
+
+- src 아래에 config 만들고 그 아래에 constnats.js 만들기 : 많이 쓰이는 것들을 정리하기 위한 파일
+(constnats.js) export const API_URL = 'http://localhost:8080';
+(index.js) import {API_URL} from '../config/constants'
+
+- 에러시에 status 코드 같이 보내기
+catch((eroor) => {
+    res.status(400).send("상품 조회에 에러가 발생했습니다.");
+  })
+
+- history.replace() : 이전페이지가 대체된다.
+
+- dayjs로 원하는 날짜형식
+{dayjs(product.createdAt).format('YYYY년 MM월 DD일')} 
+-> 알파벳은 대문자로 해야됨.
+
+- 줄바꿈을 그대로 보여주는 태그
+<pre id="description">{product.description}</pre>
+
+- REST API(Representational State Transfer Application Programming Interface)
+: API를 표현하는 방법론 중 가장 유명한 표현 방식
+ex : Restful하게 짜다 -> REST 규칙을 지켰다.
+https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html
+REST API 규칙
+1. http method 에 따라 자원의 행위를 정한다.
+post : 자원을 생성할 때
+get : 자원을 조회할 때
+put : 자원을 업데이트할 때
+delete : 자원을 삭제할 때
+2. / 로 계층 관계를 나타낸다.
+good case : /products/1
+bad case : /product/1
+3. 동사보다는 명사, 대문자보다는 소문자를 이용한다.
+good case : /products, POST
+bad case : /Product/create, PUT

@@ -1,0 +1,42 @@
+#upload-container {
+  padding-top: 36px;
+}
+
+#upload-img-placeholder {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  background-color: darkgray;
+}
+
+#upload-img-placeholder > img {
+  width: 50px;
+  height: 50px;
+}
+#upload-img-placeholder > span {
+  font-size: 14px;
+  color: gray;
+}
+.upload-name {
+  width: 200px;
+}
+
+.upload-label {
+  font-size: 18px;
+  width: 80px;
+}
+
+#product-description {
+  height: 150px;
+}
+#submit-button {
+  float: right;
+  background-color: blue;
+  color: white;
+  border: none;
+  margin-top: 16px;
+}

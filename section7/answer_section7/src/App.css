@@ -1,0 +1,6 @@
+html,
+body,
+#root,
+#root > div, #root > div > div {
+  height: 100%;
+}

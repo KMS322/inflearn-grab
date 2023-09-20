@@ -1,0 +1,29 @@
+1. 서버용 폴더 만들어서 노드 초기 환경 구축
+2. express, cor 설치
+3. server.js 만들어서 express로 기본 서버 구축하기(get, post 요청 만들어서 postman으로 확인)
+4. get요청으로 products 객체 구성
+{
+        id: 1,
+        name: "농구공",
+        price: 100000,
+        seller: "조던",
+        imageUrl: "images/products/basketball1.jpeg",
+      },
+      {
+        id: 2,
+        name: "축구공",
+        price: 50000,
+        seller: "메시",
+        imageUrl: "images/products/soccerball1.jpg",
+      },
+      {
+        id: 3,
+        name: "키보드",
+        price: 10000,
+        seller: "그랩",
+        imageUrl: "images/products/keyboard1.jpg",
+      },
+5. 퍼블 프로젝트에서 구축한 서버로 통신하도록 하기 - mainpage
+6. 쿼리 요청해서 확인해보기
+7. postman으로 post 요청 확인해보기
+8. 경로 파라미터로 id값 설정해보기

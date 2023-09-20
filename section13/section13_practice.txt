@@ -1,0 +1,16 @@
+1. 배너이미지 uploads 폴더로 옮기기
+2. models에 banner.js 생성해서 banner 이미지 db 만들기
+3. db에 imageurl, href 정보 입력
+4. server.js에 "/banners" API 만들기
+5. main/index.js 에서 axios로 banners 이미지 불러오기
+6. 기존 banner를 Carousel로 싸기
+7. banner 클릭시 상품페이지로 이동하게 LINK로 설정
+8. models/product.js에 soldout 배열 추가
+9. db열어서 soldout 항목 직접 추가
+10. server.js에 post 요청으로 purchase 코드 짜기
+11. get(products)에 soldout 추가
+12. blur 처리하는 div 만들기
+13. soldout = 1일때 blur 되게 처리
+14. product 페이지에 결제하기 버튼 만들기
+15. onClickPurChase 함수 만들기(구매시에 일어나는 일 처리)
+16. 구매 됐을 때, 버튼이 disabled 되게 하기
