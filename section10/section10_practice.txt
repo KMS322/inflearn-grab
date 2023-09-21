@@ -1,5 +1,5 @@
 1. 서버용 폴더 만들어서 노드 초기 환경 구축
-2. express, cor 설치
+2. express, cors 설치
 3. server.js 만들어서 express로 기본 서버 구축하기(get, post 요청 만들어서 postman으로 확인)
 4. get요청으로 products 객체 구성
 {
